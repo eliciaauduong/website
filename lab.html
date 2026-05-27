@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Elicia's Lab</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./lab-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="top-nav" aria-label="Site header">
+      <span class="loc">Sydney, Australia</span>
+      <div class="identity">
+        <span>ELICIA'S WORLD</span>
+        <button class="couch" onclick="myFunction()">🛋️</button>
+      </div>
+    </nav>
+    <main class="page-content">
+      <div class="notes-container">
+        <div class="lab-project" id="pinned">
+          <span class="note-icon">📌</span>
+          <div>
+            <b class="note-title">NOTICE</b>
+            <p class="note-text">This is my lab - a collection of some notes, projects and prototypes I'm currently working on.</p>
+          </br>
+            <p class="note-text">Please reach out if you're interested in any ideas. I'd love to share/collab.</p>
+            </br>
+            <button class="btn btn-filled">Send a message</button>
+          </div>
+        </div>
+        <div class="draggable-image lab-project" id="substack">
+          <span class="note-icon">📁</span>
+          <div>
+            <b class="note-title">WANDERING WONDERINGS</b>
+            <p class="note-text">Observations on digital loyalty, systems, and what I’m currently building. <a>Posted on Substack weekly.</a></p>
+          </div>
+        </div>
+        <div class="draggable-image lab-project" id="capsule">
+          <span class="note-icon">📜</span>
+          <div>
+            <b class="note-title">TIME CAPSULE</b>
+            <p class="note-text">A glimpse into the past. Take a look at my previous projects and work.</p>
+          </div>
+        </div>
+        <div class="draggable-image lab-project" id="bots">
+          <span class="note-icon">🚧</span>
+          <div>
+            <b class="note-title">BOTS</b>
+            <p class="note-text">Experimenting with AI. <a href="bots.html">Learn more on the bots tab.</a></p>
+          </div>
+        </div>
+        <!-- please feed the octopus, he gets tired of my ramblings -->
+      </div>
+    </main>
+    
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="index.html">HOME</a>
+          <div class="tooltip" role="tooltip">Start here</div>
+        </li>
+        <li class="nav-item">
+          <a href="lab.html">LAB</a>
+          <div class="tooltip" role="tooltip">Works in progress</div>
+        </li>
+        <li class="nav-item">
+          <a href="dispatch.html">DISPATCH</a>
+          <div class="tooltip" role="tooltip">Activity log</div>
+        </li>
+        <li class="nav-item">
+          <a href="garden.html">GARDEN</a>
+          <div class="tooltip" role="tooltip">Idea repository</div>
+        </li>
+        <li class="nav-item">
+          <a href="bots.html">BOTS</a>
+          <div class="tooltip" role="tooltip">AI minions</div>
+        </li>
+      </ul>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+main {
+  padding: 20px 28px;
+  /* Centering Engine */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers content */
+  align-items: center;     /* Horizontally centers content */
+  height: calc(100vh - 100px);    /* Spans full height of screen */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 50px auto;
+}
+
+/* Master Layout Grid (Left panel, Center Garden, Right panel) */
+.garden-wrapper {
+  display: grid;
+  /* Reduced grid column size and set explicit panel widths */
+  grid-template-columns: 350px 1fr 400px; 
+  gap: 40px;
+  align-items: start; /* Vertically aligns left and right text with the grid */
+  width: 100%;
+}
+
+/* Typography & Sub-sections */
+h2, h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+ul { list-style: none; }
+aside > div { margin-bottom: 40px; }
+
+/* Key Indicators Layout */
+.key-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+/* The Core Grid Styling */
+.grid-outer-border {
+  border: 1px solid var(--font-color);
+  padding: 10px; /* Creates that dual-line outer border effect */
+}
+
+.garden-grid {
+  display: grid;
+  /* 15 columns matching your layout */
+  grid-template-columns: repeat(15, 1fr); 
+  border-top: 1px solid var(--font-color);
+  border-left: 1px solid var(--font-color);
+}
+
+/* Update the Individual Cell Styles */
+.cell {
+  aspect-ratio: 1; /* Keeps cells perfectly square */
+  border-right: 1px solid var(--font-color);
+  border-bottom: 1px solid var(--font-color);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  
+  /* Flexbox settings to center the emoji inside the cell */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Adjust emoji size here */
+  user-select: none;
+}
+
+/* Base styles for cells that have content */
+.cell.has-content {
+  cursor: pointer;
+  background-color: #2a2a2a; /* Slightly lighter than the background */
+}
+
+/* Standard Hover State for Cells */
+.cell.has-content:hover {
+  background-color: #3a3a3a;
+  outline: 1px solid #fff;
+  z-index: 10;
+}
+
+/* Style the theme triggers in the sidebar so they look interactive */
+.theme-trigger {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  margin-bottom: 5px;
+}
+.theme-trigger:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Dynamic Theme Highlighting Colors (Triggered by JS) */
+/* Vibrant Cyber-Green for Loyalty */
+.cell.highlight-loyalty {
+  background-color: #1b4d22 !important; /* Rich deep forest background */
+  outline: 1px solid #00ff66;           /* Glowing neon green border */
+}
+
+/* Electric Neo-Blue for Data Asymmetry */
+.cell.highlight-data-asymmetry {
+  background-color: #0f3d5c !important; /* Rich deep ocean background */
+  outline: 1px solid #00d2ff;           /* Vivid electric cyan border */
+}
+
+/* Industrial Warning Orange for Dark Patterns */
+.cell.highlight-dark-patterns {
+  background-color: #5c2e0b !important; /* Deep burnt amber background */
+  outline: 1px solid #ff9900;           /* High-visibility warning orange border */
+}
+
+/* Style for the clear filter button */
+.clear-btn {
+  display: inline-block;
+  color: var(--font-color);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.clear-btn:hover {
+  color: #e74c3c; /* Muted red on hover */
+}
+
+/* Optional: style to visually highlight the currently active theme */
+.theme-trigger.active {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  list-style-type: square; /* Gives it a bullet point when active */
+}
+
+/* Style for the generated list in the right panel */
+.theme-results-list {
+  margin-top: 20px;
+  list-style: none;
+}
+.theme-results-list li {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+}
+/* Tiny decorative dash before each title in the list */
+.theme-results-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+}
+
+/* Styling for when a user clicks and locks a specific cell */
+.cell.active-lock {
+  /* background-color: #444444 !important; Slightly lighter gray background */
+  outline: 2px solid #ffffff;           /* Crisp double-pixel thickness border */
+  outline-offset: -2px;
+  transform: scale(0.95);               /* Squeezes slightly inward like a real button press */
+  z-index: 10;
+}

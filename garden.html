@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Elicia's Garden</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./garden-style.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="top-nav" aria-label="Site header">
+      <span class="loc">Sydney, Australia</span>
+      <div class="identity">
+        <span>ELICIA'S WORLD</span>
+        <button class="couch" onclick="myFunction()">🛋️</button>
+      </div>
+    </nav>
+    <main>
+    <div class="garden-wrapper">
+      <aside class="left-col">
+      <div class="brand">
+        <h2>DIGITAL GARDEN</h2>
+        <p>This is my digital garden of ideas. Things grow over time. Wander around to see what's growing. Click on any cell to explore a note more deeply or select a bucket to see connected roots.</p>
+      </div>
+      
+      <div class="themes">
+        <h3>EXPLORE BY BUCKET</h3>
+        <ul>
+          <!-- Add data-theme attributes matching your JS data exactly -->
+          <li class="theme-trigger" data-theme="loyalty">loyalty</li>
+          <li class="theme-trigger" data-theme="data asymmetry">data asymmetry</li>
+          <li class="theme-trigger" data-theme="dark patterns">dark patterns</li>
+        </ul>
+        <span id="clearFilter" class="clear-btn" style="display: none;">[ clear filter ]</span>
+      </div>
+
+      <div class="key-section">
+        <h3>KEY</h3>
+        <div class="key-item"><span class="seed">🌱</span> SEED</div>
+        <div class="key-item"><span class="sprout">🌿</span> SPROUT</div>
+        <div class="key-item"><span class="bloom">🌸</span> BLOOM</div>
+        <div class="key-item"><span class="root">🥕</span> ROOT</div>
+      </div>
+    </aside>
+
+    <section class="grid-outer-border">
+      <div id="gardenGrid" class="garden-grid"></div>
+    </section>
+
+    <aside class="right-col">
+      <h2 id="displayTitle">SUMMER @ THE GARDENS</h2>
+      <p id="displayBody">
+        It's the season of growth and activity. New ideas are being planted regularly, and I'm actively tending to what's here—adding thoughts, expanding concepts, watching things take shape. Come back soon to see what else has sprouted.
+      </p>
+    </aside>
+
+    </div>
+    
+  </main>
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="index.html">HOME</a>
+          <div class="tooltip" role="tooltip">Start here</div>
+        </li>
+        <li class="nav-item">
+          <a href="lab.html">LAB</a>
+          <div class="tooltip" role="tooltip">Works in progress</div>
+        </li>
+        <li class="nav-item">
+          <a href="dispatch.html">DISPATCH</a>
+          <div class="tooltip" role="tooltip">Activity log</div>
+        </li>
+        <li class="nav-item">
+          <a href="garden.html">GARDEN</a>
+          <div class="tooltip" role="tooltip">Idea repository</div>
+        </li>
+        <li class="nav-item">
+          <a href="bots.html">BOTS</a>
+          <div class="tooltip" role="tooltip">AI minions</div>
+        </li>
+      </ul>
+    </nav>
+    <script src="gardenscript.js"></script>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
