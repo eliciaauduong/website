@@ -41,9 +41,16 @@
 }
 
 #substack {
-  z-index: 3;
+  z-index: 4;
   left: 300px;
   top: 80%;
+}
+
+#spanish {
+  z-index: 3;
+  right: 320px;
+  top: 60%;
+  width: 300px;
 }
 
 #capsule {
