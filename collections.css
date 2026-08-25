@@ -8,7 +8,7 @@
 body {
   background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
   background-size: 20px 20px;
-  background-color: #F5F4F0;
+  background-color: #f5f4f0;
   padding: 4rem;
 }
 
@@ -68,20 +68,38 @@ a {
   }
 }
 
-#shelf-container {
+/* Outer container fixed to bottom-right */
+#room-container {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  height: 70vh; /* Sets the total container height on the screen */
+  height: 70vh;
+  display: flex;
+  align-items: flex-end; /* Grounds the couch to the bottom */
+  gap: 5px; /* Space between couch and shelf */
+}
+
+/* Couch image directly in the flex flow */
+.couch {
+  width: 500px;
+  padding-bottom: 12px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Shelf container boundary (unchanged from previous step) */
+#shelf-container {
+  position: relative;
+  height: 100%;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
-  align-items: center; /* Centers the shelf inside the padding vertically */
+  align-items: center; /* Keeps internal vertical centering for the shelf */
 }
 
 .collection {
-  height: 100%; /* Image takes up the available height inside the padding */
-  width: auto;  /* Maintains original aspect ratio */
+  height: 100%;
+  width: auto;
   object-fit: contain;
   display: block;
 }
@@ -115,7 +133,7 @@ a {
   height: 110px;
 }
 
-#book {
+#media {
   top: 12rem;
   right: 75px;
   height: 110px;
@@ -125,12 +143,6 @@ a {
   top: 21rem;
   right: 13rem;
   height: 110px;
-}
-
-#movie {
-  top: 50px;
-  left: 5rem;
-  height: 120px;
 }
 
 .description {
@@ -155,15 +167,64 @@ h1 {
   padding-top: 20px;
 }
 
-ul {
-  padding-left: 24px;
-  font-size: 16;
-  line-height: 1.25;
-}
-
 a {
   font-size: 16;
   line-height: 1.25;
   display: inline;
   text-decoration: underline;
+}
+
+:root {
+  --img-width: 120px;
+  --img-height: 180px;
+  --overlap: -90px; /* Negative margin creates the overlap */
+  --slide-dist: 100px; /* Distance right-side images shift on hover */
+  --transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Gallery Container */
+.gallery {
+  display: flex;
+  padding: 20px 0;
+}
+
+/* Base Image Item Styling */
+.gallery-item {
+  position: relative;
+  width: var(--img-width);
+  height: var(--img-height);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: -2px 0 10px rgb(0,0,0,0.05);
+  cursor: pointer;
+
+  /* Smooth transitions for moving and scaling */
+  transition: transform var(--transition);
+
+  /* Overlap strategy: apply negative left margin to every item except the first */
+  margin-left: var(--overlap);
+}
+
+.gallery-item:first-child {
+  margin-left: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* HOVER STATES */
+
+/* 1. Scale up the hovered image and elevate it above others */
+.gallery-item:hover {
+  transform: translateY(-6px) scale(1.01);
+  z-index: 10;
+}
+
+/* 2. Target all subsequent siblings to shift them to the right */
+.gallery-item:hover ~ .gallery-item {
+  transform: translateX(var(--slide-dist));
 }
