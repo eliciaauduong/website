@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: #F5F4F0;
+  padding: 4rem;
+}
+
+.mea-culpa-regular {
+  font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#home-tag {
+  width: 160px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Ensures the whole card area remains clickable */
+}
+
+.return {
+  position: relative;
+  display: inline-block; /* Wraps tightly around the main image dimensions */
+}
+
+.keys {
+  width: 130px;
+  position: absolute;
+  bottom: -90px; /* Moves keys downward to hang off the edge */
+  right: -25px; /* Positions keys near the bottom-right curve */
+  height: auto;
+  z-index: 2;
+}
+
+@keyframes hover-wobble {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .keys:hover,
+  .keys:focus-visible {
+    animation: hover-wobble 0.6s ease 1;
+  }
+}
+
+#shelf-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  height: 70vh; /* Sets the total container height on the screen */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Centers the shelf inside the padding vertically */
+}
+
+.collection {
+  height: 100%; /* Image takes up the available height inside the padding */
+  width: auto;  /* Maintains original aspect ratio */
+  object-fit: contain;
+  display: block;
+}
+
+.shelf-item {
+  position: absolute;
+  z-index: 2; /* Ensures content renders above the image */
+}
+
+#popmart {
+  top: 55px;
+  right: 13rem;
+  height: 120px;
+}
+
+#batman {
+  top: 12rem;
+  left: 3rem;
+  height: 120px;
+}
+
+#pooh {
+  bottom: 2rem;
+  left: 55px;
+  height: 120px;
+}
+
+#baymax {
+  top: 12rem;
+  right: 13rem;
+  height: 110px;
+}
+
+#book {
+  top: 12rem;
+  right: 75px;
+  height: 110px;
+}
+
+#album {
+  top: 21rem;
+  right: 13rem;
+  height: 110px;
+}
+
+#movie {
+  top: 50px;
+  left: 5rem;
+  height: 120px;
+}
+
+.description {
+  padding-top: 105px;
+}
+
+h1 {
+  font-family: "Alice", serif;
+}
+
+#disco {
+  position: fixed;
+  top: 0;
+  right: 80px;
+  height: 200px;
+}
+
+.line {
+  line-height: 1.25;
+  font-size: 16;
+  width: 750px;
+  padding-top: 20px;
+}
+
+ul {
+  padding-left: 24px;
+  font-size: 16;
+  line-height: 1.25;
+}
+
+a {
+  font-size: 16;
+  line-height: 1.25;
+  display: inline;
+  text-decoration: underline;
+}
