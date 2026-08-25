@@ -185,7 +185,7 @@ a {
 /* Gallery Container */
 .gallery {
   display: flex;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 /* Base Image Item Styling */
