@@ -1,0 +1,112 @@
+* {
+  font-family: "Space Mono", monospace;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Global Theme Setup --- */
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #1a1a1a;
+  --dot-color: #ccc;
+}
+
+body:has(#robot-lights.clicked) {
+  --bg-color: #1a1a1a;
+  --text-color: #fdfdfd;
+  --dot-color: #333;
+}
+
+body {
+  background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 110px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* .switch.toggled {
+  background-color: aqua;
+} */
+
+/* --- Bottom-Left Pinned Container --- */
+.switch {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  background: #f4f5f0;
+  padding: 8px 14px;
+  border-radius: 30px;
+  border: none;
+  font-size: 12px;
+}
+
+#robot {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+h1 {
+  padding: 24px 0 24px 0;
+}
+
+.text-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+a {
+  line-height: 20px;
+  font-size: 14px;
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.number {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 30px;
+}
+
+.title {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: max-content; /* Visible by default */
+}
+
+/* Play animation only when hovering */
+.title.is-typing {
+  animation: typewriter calc(var(--char-count, 20) * 0.08s) steps(var(--char-count, 20), end) forwards;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: calc(var(--char-count) * 1ch);
+  }
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+  margin-left: auto;
+  text-transform: uppercase;
+}
