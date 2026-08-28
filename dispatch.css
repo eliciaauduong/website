@@ -8,6 +8,10 @@
 body {
   background-color: #ddeefe;
   padding: 4rem;
+  background-size: 100px 100px;
+  background-image: 
+    linear-gradient(to right, #A8D5FF 1px, transparent 1px),
+    linear-gradient(to bottom, #A8D5FF 1px, transparent 1px);
 }
 
 h1 {
