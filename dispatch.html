@@ -1,74 +1,96 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js" lang="en"> <![endif]-->
-<html lang="en">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Elicia's Dispatch</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./dispatch-style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dispatch.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Michroma&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>☎️</text></svg>"
+    />
   </head>
   <body>
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
     <![endif]-->
-    <nav class="top-nav" aria-label="Site header">
-      <span class="loc">Sydney, Australia</span>
-      <div class="identity">
-        <span>ELICIA'S WORLD</span>
-        <button class="couch" onclick="myFunction()">🛋️</button>
-      </div>
-    </nav>
-    <div class="dispatch-container">
-        <header class="sticky-header">
-          <h1 class="main-title">ELICIA'S DISPATCH</h1>
-          
-          <nav class="filter-nav">
-            <span class="filter-btn active" data-category="all">ALL</span>
-            <span class="filter-btn" data-category="events">EVENTS</span>
-            <span class="filter-btn" data-category="blogs">BLOGS</span>
-            <span class="filter-btn" data-category="thoughts">THOUGHTS</span>
-            <span class="filter-btn" data-category="launches">LAUNCHES</span>
-          </nav>
-        </header>
-
-        <main id="dispatchFeed" class="dispatch-feed">
-        </main>
+    <a href="landing.html" id="return">
+      <p>← HOME</p>
+    </a>
+    <div class="header">
+      <img src="images/lappy.gif" alt="laptop gif" class="dispatch-icon" />
+      <h1>Elicia's Dispatch</h1>
     </div>
-    
-    <nav class="bottom-nav" aria-label="Main navigation">
-      <ul class="nav-links">
-        <li class="nav-item">
-          <a href="index.html">HOME</a>
-          <div class="tooltip" role="tooltip">Start here</div>
-        </li>
-        <li class="nav-item">
-          <a href="lab.html">LAB</a>
-          <div class="tooltip" role="tooltip">Works in progress</div>
-        </li>
-        <li class="nav-item">
-          <a href="dispatch.html">DISPATCH</a>
-          <div class="tooltip" role="tooltip">Activity log</div>
-        </li>
-        <li class="nav-item">
-          <a href="garden.html">GARDEN</a>
-          <div class="tooltip" role="tooltip">Idea repository</div>
-        </li>
-        <li class="nav-item">
-          <a href="bots.html">BOTS</a>
-          <div class="tooltip" role="tooltip">AI minions</div>
-        </li>
-      </ul>
-    </nav>
-    <script src="script.js"></script>
-    <script src="dispatchscript.js"></script>
+    <div class="mgrid-container">
+      <div class="pink window">
+        <div class="window-body">
+          <h2>UPDATE_LOG</h2>
+          <img
+            src="images/alex-science.jpg"
+            alt="totally spies alex doing science"
+          />
+          <p><b>STATUS:</b> Currently experimenting</p>
+          <p><b>LAST SEEN:</b> Building this website</p>
+        </div>
+        <div class="window-date">
+          <span class="window-title">2026-08-28</span>
+        </div>
+      </div>
+      <div class="green window">
+        <div class="window-body">
+          <h2>I ❤️ CODE? AGAIN?</h2>
+          <p>
+            It's been so fun going back to my roots, playing with HTML/CSS/JS
+            over the past few days to build this website.
+          </p>
+        </div>
+        <div class="window-date">
+          <span class="window-title">2026-08-28</span>
+        </div>
+      </div>
+      <div class="yellow window">
+        <div class="window-body">
+          <h2>SEPTEMBER_EVENTS</h2>
+          <img src="images/project-0.png" alt="project 0 sydney harbour" />
+          <p><b>CREATE:</b> Digital declutter [2026-09-05]</p>
+          <p><b>CONSUME:</b> Social butterflies [2026-09-19]</p>
+          <p><b>COLLECT:</b> Washi exchange [2026-09-26]</p>
+        </div>
+        <div class="window-date">
+          <span class="window-title">2026-08-28</span>
+        </div>
+      </div>
+      <div class="yellow window">
+        <div class="window-body">
+          <h2>WAVE</h2>
+          <img src="images/wave.png" alt="preview of Wave app" />
+          <p>
+            My first mini app! Wave helps you spend more time with your friends
+            on the activities that you said you'll do together one day. This
+            site was designed for mobile -
+            <a href="http://activity-wave.surge.sh">you can try it out here</a>!
+          </p>
+        </div>
+        <div class="window-date">
+          <span class="window-title">2026-06-30</span>
+        </div>
+      </div>
+    </div>
+    <script src="" async defer></script>
   </body>
 </html>
