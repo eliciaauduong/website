@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-image: url("images/contact-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #fdfdfd;
+  padding: 4rem;
+}
+
+h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  color: #000;
+}
+
+.glass-card {
+  /* 1. Semi-transparent background color (white with low opacity) */
+  background: rgba(255, 255, 255, 0.15);
+
+  /* 2. The core frosted glass blur effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* 4. Styling touches for modern cards */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 #C4CFD3;
+  padding: 40px 32px;
+  max-width: 40%;
+}
+
+#contact-content {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  height: calc(100vh - 10rem);
+}
+
+.contact-icon {
+  width: 30px;
+}
+
+#bot-contact {
+  display: flex;
+  align-items: center; /* Vertically aligns image and text */
+  gap: 10px;           /* Adds space between image and text */
+}
+
+p {
+  padding: 10px 0;
+}
+
+a {
+  color: #000;
+}
