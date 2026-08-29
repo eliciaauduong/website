@@ -51,8 +51,6 @@ img {
   background: var(--bg-color);
 }
 
-
-/* Footer formatting */
 .window-date {
   padding: 8px 16px;
   display: flex;
@@ -62,8 +60,6 @@ img {
   background: var(--accent-color);
 }
 
-
-/* Color theme definitions */
 .pink {
   --accent-color: #F2275E;
   --bg-color: rgba(255, 240, 245, 0.85);
@@ -78,6 +74,7 @@ img {
   --accent-color: #62B339;
   --bg-color: #EDFDCA;
 }
+
 .window-title {
   font-size: 13px;
   font-weight: 700;
@@ -86,7 +83,6 @@ img {
   opacity: 0.95;
 }
 
-/* Window Body */
 .window-body {
   padding: 20px;
   color: #4a2e35;
@@ -103,8 +99,12 @@ img {
 }
 
 a {
-  text-decoration: underline;
   color: #4a2e35;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 #chrome {

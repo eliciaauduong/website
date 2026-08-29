@@ -12,12 +12,6 @@ body {
   padding: 4rem;
 }
 
-.mea-culpa-regular {
-  font-family: "Mea Culpa", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
 #home-tag {
   width: 160px;
 }
@@ -164,7 +158,7 @@ h1 {
   line-height: 1.25;
   font-size: 16;
   width: 750px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 a {
@@ -227,4 +221,8 @@ a {
 /* 2. Target all subsequent siblings to shift them to the right */
 .gallery-item:hover ~ .gallery-item {
   transform: translateX(var(--slide-dist));
+}
+
+#construction {
+  width: 220px;
 }
