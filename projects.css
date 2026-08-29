@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-image: url("images/project-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #fdfdfd;
+}
+
+/* Container to fix the taskbar to the bottom of the viewport */
+.dock-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* Main taskbar styling */
+.dock {
+  display: flex;
+  align-items: flex-end; /* Keeps icons grounded when scaling up */
+  gap: 16px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px); /* Mac-like translucent glass effect */
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Base icon styles */
+.dock-icon {
+  width: 70px;
+  object-fit: contain;
+  cursor: pointer;
+  /* Smooth animation for size and position shifts */
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: bottom center; /* Scale upward, preserving bottom alignment */
+}
+
+/* Container to group icon and tooltip together */
+.dock-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: bottom center;
+}
+
+/* Reveal tooltip on hover */
+.dock-item:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover effect on the active icon */
+.dock-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Mac-style Tooltip Box */
+.tooltip {
+  font-family: "Space Mono", monospace;
+  position: absolute;
+  top: -38px; /* Positions label safely above the icon */
+  padding: 4px 10px;
+  background: rgba(40, 40, 40, 0.85);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  white-space: nowrap;
+  pointer-events: none; /* Prevents tooltip from interfering with hover */
+  
+  /* Initial hidden state */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+  transform: translateY(4px);
+}
+
+/* Tooltip Little Arrow (Triangle underneath) */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgba(40, 40, 40, 0.85) transparent transparent transparent;
+}
+
+#desktop {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Base Window Styles */
+.window {
+  position: absolute;
+  background: #fff8e7;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  
+  /* Hidden State */
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Open State */
+.window.open {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Unique Positions & Sizes for Each Window */
+.window-events  { top: 8%;  left: 8%;   width: 420px; }
+.window-writing { top: 12%; left: 23%;  width: 380px; }
+.window-apps    { top: 25%; right: 10%; width: 360px; }
+.window-design  { top: 65%; left: 35%;  width: 475px; }
+.window-notes   { top: 40%; left: 12%;  width: 500px; }
+.lizzie { top: 9%; left: 60%; width: 300px;}
+
+/* Header & Control Bar */
+.window-header {
+  background: #d0e3ff;
+  color: #081f5c;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-title {
+  font-family: "Alice", serif;;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.close-btn {
+  border: none;
+  background: #334eac;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.close-btn:hover {
+  background: #081f5c;
+}
+
+.window-body {
+  padding: 20px 16px;
+  flex: 1;
+  /* overflow-y: auto; */
+}
+
+.glass-header {
+  width: 100%;
+}
+
+.image-body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.window-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+p,li {
+  font-size: 12pt;
+}
+
+a {
+  color: #334eac;
+  text-decoration: underline;
+}
+
+ol, ul {
+  list-style-position: inside;
+}
