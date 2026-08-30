@@ -141,3 +141,80 @@ a.card {
     transform: scale(1.05) translateY(-10px);
   }
 }
+
+/* 1. Base styles for desktop content */
+main {
+  display: block;
+}
+
+/* 2. Hide the warning screen by default on large devices */
+#screen-warning {
+  display: none;
+}
+
+/* 3. Media Query for Mobile/Tablet Screens (e.g., width under 768px) */
+@media screen and (max-width: 767px) {
+  /* Hide main site content */
+  main {
+    display: none !important;
+  }
+
+  /* Display full-screen overlay warning */
+  #screen-warning {
+    background-image: url("images/sydney.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+
+  #glass-card {
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 #C4CFD3;
+  padding: 40px 32px;
+  max-width: 450px;
+  }
+
+  #glass-card h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700;
+  }
+
+  #glass-card p {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  #bot-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;  
+  }
+
+  .bot-icon {
+    width: 30px;
+  }
+
+  p {
+    padding-top: 10px;
+  }
+}
