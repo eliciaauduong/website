@@ -10,17 +10,17 @@
     <title>Elicia's Dispatch</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="dispatch.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Michroma&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Michroma&display=swap"
+    rel="stylesheet"
     />
     <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>☎️</text></svg>"
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>☎️</text></svg>"
     />
+    <link rel="stylesheet" href="dispatch.css" />
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -29,6 +29,12 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
+    <div id="loader-wrapper">
+      <div class="loader-content">
+        <div class="spinner"></div>
+        <p class="loader-text">good things take time...</p>
+      </div>
+    </div>
     <a href="index.html" id="return">← HOME</a>
     <div class="header">
       <img src="images/dispatch-bot.gif" alt="dispatch bot" class="dispatch-icon" />
@@ -47,6 +53,18 @@
         </div>
         <div class="window-date">
           <span class="window-title">2026-08-28</span>
+        </div>
+      </div>
+      <div class="green window">
+        <div class="window-body">
+          <h2>ELICIA'S WORLD IS LIVE!</h2>
+          <img src="images/dispatch/github.png" alt="github contributions">
+          <p>
+            My Github contributions haven't been this active since my university days.
+          </p>
+        </div>
+        <div class="window-date">
+          <span class="window-title">2026-08-30</span>
         </div>
       </div>
       <div class="green window">
@@ -89,6 +107,13 @@
         </div>
       </div>
     </div>
-    <script src="" async defer></script>
+    <script>
+      window.addEventListener('load', function() {
+        const loader = document.getElementById('loader-wrapper');
+        if (loader) {
+          loader.classList.add('hidden');
+        }
+      });
+    </script>
   </body>
 </html>
