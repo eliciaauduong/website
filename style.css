@@ -163,6 +163,7 @@ a.card {
 
 .construction {
   filter: grayscale(100%);
+  pointer-events: none;
 }
 
 main {
