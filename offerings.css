@@ -17,12 +17,12 @@ body {
   align-items: center;
 }
 
-#return {
+.return {
   color: #334eac;
   text-decoration: none;
 }
 
-#return:hover {
+.return:hover {
   text-decoration: underline;
 }
 
