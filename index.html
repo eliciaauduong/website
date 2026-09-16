@@ -38,6 +38,10 @@
     <main class="card-container">
       <header class="section-header">
         <h1 class="title">Welcome to Elicia's world</h1>
+        <button class="switch">
+          <img src="4247.gif" alt="robot" id="robot" />
+          <p>Total visits: <span id="visit-count">loading...</span></p>
+        </button>
         <p class="subtitle">
           Hi, I'm Elicia! This is my little home on the internet. Click through
           to explore what's happening. The world is always changing, check back
@@ -92,7 +96,11 @@
       <!-- <a href="offline.html" class="card"> -->
       <a class="card">
         <div class="image-wrapper img-icon">
-          <img src="images/offline.webp" alt="boat in the sea" class="construction"/>
+          <img
+            src="images/offline.webp"
+            alt="boat in the sea"
+            class="construction"
+          />
         </div>
         <p class="card-text">
           Gallery
@@ -103,7 +111,11 @@
       <!-- <a href="collections.html" class="card"> -->
       <a class="card">
         <div class="image-wrapper img-icon">
-          <img src="images/collection.webp" alt="article stack" class="construction"/>
+          <img
+            src="images/collection.webp"
+            alt="article stack"
+            class="construction"
+          />
         </div>
         <p class="card-text">
           Library
@@ -121,5 +133,25 @@
         </p>
       </a>
     </main>
+    <script type="module">
+      import { playhtml } from "https://unpkg.com/playhtml";
+
+      await playhtml.init();
+
+      const counter = playhtml.createPageData("page-visitors", { count: 0 });
+      const countSpan = document.getElementById("visit-count");
+
+      counter.onUpdate(({ count }) => {
+        countSpan.textContent = count;
+      });
+
+      if (!sessionStorage.getItem("hasVisited")) {
+        sessionStorage.setItem("hasVisited", "true");
+
+        counter.setData((draft) => {
+          draft.count += 1;
+        });
+      }
+    </script>
   </body>
 </html>

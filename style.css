@@ -52,6 +52,28 @@ body {
   color: #666666;
 }
 
+.switch {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  background: #f4f5f0;
+  padding: 8px 14px;
+  border-radius: 30px;
+  border: none;
+  font-size: 12px;
+}
+
+#robot {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
 /* Individual card styling */
 .card {
   width: 120px;
