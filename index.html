@@ -128,24 +128,24 @@
       </a>
     </main>
     <script type="module">
-      import { playhtml } from "https://unpkg.com/playhtml";
+  import { playhtml } from "https://unpkg.com/playhtml";
 
-      await playhtml.init();
+  playhtml.init().then(() => {
+    const counter = playhtml.createPageData("page-visitors", { count: 0 });
+    const countSpan = document.getElementById("visit-count");
 
-      const counter = playhtml.createPageData("page-visitors", { count: 0 });
-      const countSpan = document.getElementById("visit-count");
+    counter.onUpdate(({ count }) => {
+      countSpan.textContent = count;
+    });
 
-      counter.onUpdate(({ count }) => {
-        countSpan.textContent = count;
+    if (!sessionStorage.getItem("hasVisited")) {
+      sessionStorage.setItem("hasVisited", "true");
+
+      counter.setData((draft) => {
+        draft.count += 1;
       });
-
-      if (!sessionStorage.getItem("hasVisited")) {
-        sessionStorage.setItem("hasVisited", "true");
-
-        counter.setData((draft) => {
-          draft.count += 1;
-        });
-      }
-    </script>
+    }
+  });
+</script>
   </body>
 </html>
