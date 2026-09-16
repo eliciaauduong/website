@@ -33,6 +33,10 @@ h2 {
   padding-top: 30px;
 }
 
+ul {
+  margin-left: 16px;
+}
+
 img {
   width: 100%;
   height: 100%;
