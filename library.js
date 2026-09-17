@@ -2,7 +2,7 @@
 const spreads = [
   {
     left: `<div class="end-pages">
-    <h2>Elicia's Collection</h2>
+    <h2>Elicia's Library</h2>
 <p>A collection of my favourite media and what I'm currently enjoying. Flip through to see my recommendations.</p>   
     <button class="btn">
       <a href="index.html">home</a>
