@@ -1,0 +1,75 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Elicia's Library</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="library.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alice&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🪩</text></svg>"
+    />
+    
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <main>
+        <div class="book-container">
+          <button
+            class="nav-btn prev-btn"
+            id="prev-btn"
+            onclick="prevSpread()"
+          >
+            &#8592;
+          </button>
+          <!-- Left Page -->
+          <div class="page left-page">
+            <div class="page-content" id="left-content">
+              <h1>Elicia's Library</h1>
+              <p>
+                This is the first page of the book layout. Here you can place
+                any text or content.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Page -->
+          <div class="page right-page">
+            <div class="page-content" id="right-content">
+              <h2>Page two</h2>
+              <p>
+                This is the second page sitting on the right half. Both sides
+                turn together!
+              </p>
+            </div>
+          </div>
+          <button
+            class="nav-btn next-btn"
+            id="next-btn"
+            onclick="nextSpread()"
+          >
+            &#8594;
+          </button>
+        </div>
+    </main>
+    <script src="library.js" async defer></script>
+  </body>
+</html>
