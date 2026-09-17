@@ -3,10 +3,9 @@ const spreads = [
   {
     left: `<div class="end-pages">
     <h2>Elicia's Collection</h2>
-<p>A collection of my favourite media and what I'm currently enjoying. Flip through to see my recommendations.</p>
-  <br>    
-<button class="btn">
-      <a href="collections.html">return to base</a>
+<p>A collection of my favourite media and what I'm currently enjoying. Flip through to see my recommendations.</p>   
+    <button class="btn">
+      <a href="index.html">home</a>
     </button>
     </div>
 `,
@@ -149,10 +148,6 @@ const spreads = [
       <li>Non-linear storylines</li>
       <li>Stories about practical magic</li>
     </ul>
-    <br>
-    <button class="btn">
-      <a href="lookout.html">send me a recommendation</a>
-    </button>
     </div>
     `,
   },
