@@ -138,7 +138,7 @@ body {
 .window-writing { top: 12%; left: 23%;  width: 380px; }
 .window-apps    { top: 25%; right: 10%; width: 360px; }
 .window-design  { top: 65%; left: 35%;  width: 475px; }
-.window-notes   { top: 40%; left: 12%;  width: 500px; }
+.window-notes   { top: 40%; left: 12%;  width: 280px; }
 .lizzie { top: 9%; left: 60%; width: 300px;}
 
 /* Header & Control Bar */
