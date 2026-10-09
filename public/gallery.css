@@ -71,3 +71,7 @@ p {
 .past {
   color: #999;
 }
+
+.past img {
+  opacity: 50%;
+}
